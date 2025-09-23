@@ -2,9 +2,10 @@ NAME    := megaphone
 CXX     := c++
 CXXFLAGS:= -Wall -Wextra -Werror -std=c++98 -MMD
 
-SRC     := 
+# Tüm .cpp dosyalarını otomatik bul (istersen tek tek yazabilirsin)
+SRC     := $(wildcard *.cpp)
 OBJDIR  := objs
-OBJ     := $(OBJDIR)/megaphone.o
+OBJ     := $(addprefix $(OBJDIR)/,$(SRC:.cpp=.o))
 DEPS    := $(OBJ:.o=.d)
 
 all: $(NAME)
@@ -12,8 +13,9 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(CXX) $(OBJ) -o $@
 
+# Obj klasörünü oluşturup derleme
 $(OBJDIR)/%.o: %.cpp
-	mkdir -p $(OBJDIR)
+	@mkdir -p $(OBJDIR)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
