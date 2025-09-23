@@ -2,7 +2,7 @@ NAME    := megaphone
 CXX     := c++
 CXXFLAGS:= -Wall -Wextra -Werror -std=c++98 -MMD
 
-# Tüm .cpp dosyalarını otomatik bul (istersen tek tek yazabilirsin)
+# Tüm .cpp dosyalarını otomatik bul (wildcard serbest mi norm var mı ?)
 SRC     := $(wildcard *.cpp)
 OBJDIR  := objs
 OBJ     := $(addprefix $(OBJDIR)/,$(SRC:.cpp=.o))
