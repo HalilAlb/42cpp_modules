@@ -1,9 +1,8 @@
-NAME    := megaphone
+NAME    := phonebook
 CXX     := c++
 CXXFLAGS:= -Wall -Wextra -Werror -std=c++98 -MMD
 
-# Tüm .cpp dosyalarını otomatik bul (wildcard serbest mi norm var mı ?)
-SRC     := $(wildcard *.cpp)
+SRC     := Contact.cpp Phonebook.cpp main.cpp
 OBJDIR  := objs
 OBJ     := $(addprefix $(OBJDIR)/,$(SRC:.cpp=.o))
 DEPS    := $(OBJ:.o=.d)
@@ -13,7 +12,6 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(CXX) $(OBJ) -o $@
 
-# Obj klasörünü oluşturup derleme
 $(OBJDIR)/%.o: %.cpp
 	@mkdir -p $(OBJDIR)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
