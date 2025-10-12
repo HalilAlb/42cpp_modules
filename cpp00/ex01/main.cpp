@@ -6,24 +6,36 @@
 /*   By: malbayra <malbayra@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/23 03:47:14 by malbayra          #+#    #+#             */
-/*   Updated: 2025/09/23 04:08:16 by malbayra         ###   ########.fr       */
+/*   Updated: 2025/10/12 20:49:49 by malbayra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
+
+static void showMenu() {
+    std::cout << "\n";
+    std::cout << "╔════════════════════════════════╗\n";
+    std::cout << "║       PHONEBOOK MENU           ║\n";
+    std::cout << "╠════════════════════════════════╣\n";
+    std::cout << "║  ADD    - Add new contact      ║\n";
+    std::cout << "║  SEARCH - Search contacts      ║\n";
+    std::cout << "║  EXIT   - Quit program         ║\n";
+    std::cout << "╚════════════════════════════════╝\n";
+    std::cout << "> ";
+}
 
 int main() {
     PhoneBook phoneBook;
     std::string command;
 
     std::cout << "Welcome to the PhoneBook!\n";
-    std::cout << "Available commands: ADD, SEARCH, EXIT\n";
 
     while (true) {
-        std::cout << "> ";
+        showMenu();
+        
         if (!std::getline(std::cin, command))
-            break; // EOF (Ctrl+D)
-
+            break;
+        
         if (command == "ADD")
             phoneBook.add_contact();
         else if (command == "SEARCH")
@@ -31,9 +43,9 @@ int main() {
         else if (command == "EXIT")
             break;
         else if (!command.empty())
-            std::cout << "Unknown command. Try: ADD, SEARCH, EXIT\n";
+            std::cout << "Unknown command!\n";
     }
-
-    std::cout << "Goodbye!\n";
+    
+    std::cout << "\nGoodbye!\n";
     return 0;
 }

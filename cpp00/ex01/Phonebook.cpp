@@ -6,7 +6,7 @@
 /*   By: malbayra <malbayra@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/23 03:41:45 by malbayra          #+#    #+#             */
-/*   Updated: 2025/09/23 04:07:50 by malbayra         ###   ########.fr       */
+/*   Updated: 2025/10/12 20:45:40 by malbayra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 PhoneBook::PhoneBook() : _currentSize(0) {}
 PhoneBook::~PhoneBook() {}
 
-namespace {
+
     // Satır boşsa tekrar isteyen ortak girdi fonksiyonu
-    static bool promptLine(const std::string &msg, std::string &out) {
+static bool promptLine(const std::string &msg, std::string &out) {
         do {
             std::cout << msg;
             if (!std::getline(std::cin, out))
@@ -27,14 +27,13 @@ namespace {
     }
 
     // Yalnızca rakamlardan oluşup oluşmadığını kontrol eder
-    static bool isDigitsOnly(const std::string &str) {
+static bool isDigitsOnly(const std::string &str) {
         for (std::string::size_type i = 0; i < str.size(); ++i) {
             if (!std::isdigit(static_cast<unsigned char>(str[i])))
                 return false;
         }
         return true;
     }
-}
 
 void PhoneBook::add_contact() {
     std::string name, lname, nname, phone, secret;
