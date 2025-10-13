@@ -6,7 +6,7 @@
 /*   By: malbayra <malbayra@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/23 03:42:20 by malbayra          #+#    #+#             */
-/*   Updated: 2025/09/23 04:03:52 by malbayra         ###   ########.fr       */
+/*   Updated: 2025/10/13 19:34:22 by malbayra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #include <iostream>
 #include <iomanip>
 #include <cstdlib>
+#include <limits>
 
 // Renk makroları
 #define RED     "\033[31m"
@@ -45,10 +46,12 @@ private:
     void displayContact(int index) const;
     void displayAllContact() const;
     void clearScreen();
+    
 
     // 8 kişilik sabit kapasite
     Contact _contacts[8];
     int     _currentSize;
+    int     _head;
 };
 
 #endif
