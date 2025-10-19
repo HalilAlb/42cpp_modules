@@ -12,20 +12,6 @@
 
 #include "PhoneBook.hpp"
 
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: malbayra <malbayra@student.42istanbul.c    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/23 03:41:45 by malbayra          #+#    #+#             */
-/*   Updated: 2025/10/13 21:45:00 by malbayra         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-#include "PhoneBook.hpp"
-
 // Constructor
 PhoneBook::PhoneBook() : _currentSize(0), _head(0)
 {
