@@ -1,10 +1,10 @@
-NAME    := 
+NAME    := zombie
 CXX     := c++
 CXXFLAGS:= -Wall -Wextra -Werror -std=c++98 -MMD
 
-SRC     := 
+SRC     := main.cpp newZombie.cpp randomChumb.cpp Zombie.cpp
 OBJDIR  := objs
-OBJ     := $(OBJDIR)/.o
+OBJ     := $(addprefix $(OBJDIR)/, $(SRC:.cpp=.o))
 DEPS    := $(OBJ:.o=.d)
 
 all: $(NAME)
@@ -13,7 +13,7 @@ $(NAME): $(OBJ)
 	$(CXX) $(OBJ) -o $@
 
 $(OBJDIR)/%.o: %.cpp
-	mkdir -p $(OBJDIR)
+	@mkdir -p $(OBJDIR)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
