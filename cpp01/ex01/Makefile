@@ -2,7 +2,7 @@ NAME    :=
 CXX     := c++
 CXXFLAGS:= -Wall -Wextra -Werror -std=c++98 -MMD
 
-SRC     := main.cpp 
+SRC     := main.cpp Zombie.cpp zombieHorde.cpp
 OBJDIR  := objs
 OBJ     := $(addprefix $(OBJDIR)/, $(SRC:.cpp=.o))
 DEPS    := $(OBJ:.o=.d)

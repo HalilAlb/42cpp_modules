@@ -6,7 +6,7 @@
 /*   By: malbayra <malbayra@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 23:20:06 by malbayra          #+#    #+#             */
-/*   Updated: 2025/11/13 23:22:33 by malbayra         ###   ########.fr       */
+/*   Updated: 2025/11/13 23:30:23 by malbayra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,11 @@ public:
 	Zombie();
 	Zombie( std::string name );
 	~Zombie();
+	void announce( void );
+	
+	void setName( std::string name );
 };
+
+Zombie* zombieHorde( int j, std::string name );
 
 #endif
