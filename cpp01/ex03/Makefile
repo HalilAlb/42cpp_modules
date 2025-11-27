@@ -1,8 +1,11 @@
-NAME    := 
 CXX     := c++
 CXXFLAGS:= -Wall -Wextra -Werror -std=c++98 -MMD
 
-SRC     := main.cpp
+NAME    := ex03
+CXX     := c++
+CXXFLAGS:= -Wall -Wextra -Werror -std=c++98 -MMD
+
+SRC     := main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 OBJDIR  := objs
 OBJ     := $(addprefix $(OBJDIR)/, $(SRC:.cpp=.o))
 DEPS    := $(OBJ:.o=.d)
