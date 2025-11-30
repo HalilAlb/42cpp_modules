@@ -6,7 +6,9 @@
 /*   By: malbayra <malbayra@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/30 14:51:43 by malbayra          #+#    #+#             */
-/*   Updated: 2025/11/30 14:51:44 by malbayra         ###   ########.fr       */
+/*   Updated: 2025/11/30 17:52:31 by malbayra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "Harl.hpp"
 
