@@ -6,7 +6,7 @@
 /*   By: malbayra <malbayra@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 20:00:00 by malbayra          #+#    #+#             */
-/*   Updated: 2025/11/27 20:25:46 by malbayra         ###   ########.fr       */
+/*   Updated: 2025/11/27 22:15:32 by malbayra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,14 +46,12 @@ int	main(int argc, char **argv)
 	std::string filename = argv[1];
 	std::string s1 = argv[2];
 	std::string s2 = argv[3];
-	// Open input file
 	std::ifstream infile(filename.c_str());
 	if (!infile.is_open())
 	{
 		std::cerr << "Error: Could not open file '" << filename << "'" << std::endl;
 		return (1);
 	}
-	// Read entire file content
 	std::string content;
 	std::string line;
 	first = true;
@@ -65,9 +63,7 @@ int	main(int argc, char **argv)
 		first = false;
 	}
 	infile.close();
-	// Replace all occurrences
 	std::string result = replaceAll(content, s1, s2);
-	// Write to output file
 	std::string outfilename = filename + ".replace";
 	std::ofstream outfile(outfilename.c_str());
 	if (!outfile.is_open())

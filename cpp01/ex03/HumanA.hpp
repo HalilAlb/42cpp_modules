@@ -6,7 +6,7 @@
 /*   By: malbayra <malbayra@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 17:07:33 by malbayra          #+#    #+#             */
-/*   Updated: 2025/11/27 19:47:16 by malbayra         ###   ########.fr       */
+/*   Updated: 2025/11/27 22:15:49 by malbayra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class HumanA
 
   private:
 	std::string _name;
-	Weapon &_weapon; // always has a weapon
+	Weapon &_weapon;
 };
 
-#endif // HUMANA_HPP
+#endif

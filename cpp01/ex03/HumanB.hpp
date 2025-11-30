@@ -6,7 +6,7 @@
 /*   By: malbayra <malbayra@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 17:07:53 by malbayra          #+#    #+#             */
-/*   Updated: 2025/11/27 19:47:20 by malbayra         ###   ########.fr       */
+/*   Updated: 2025/11/27 22:14:32 by malbayra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class HumanB
 
   private:
 	std::string _name;
-	Weapon *_weapon; // may be null
+	Weapon *_weapon;
 };
 
-#endif // HUMANB_HPP
+#endif
