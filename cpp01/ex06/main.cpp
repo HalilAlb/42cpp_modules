@@ -6,7 +6,7 @@
 /*   By: malbayra <malbayra@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/30 18:23:36 by malbayra          #+#    #+#             */
-/*   Updated: 2025/12/01 03:58:25 by malbayra         ###   ########.fr       */
+/*   Updated: 2025/12/05 17:12:32 by malbayra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	getLevelIndex(std::string level)
 
 int	main(int argc, char **argv)
 {
-	if (argc != 2)
+	if (argc != 1)
 	{
 		std::cerr << "Usage: ./harlFilter <level>" << std::endl;
 		return (1);
