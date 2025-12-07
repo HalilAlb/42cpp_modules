@@ -6,7 +6,7 @@
 /*   By: malbayra <malbayra@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 02:26:59 by malbayra          #+#    #+#             */
-/*   Updated: 2025/11/13 19:05:51 by malbayra         ###   ########.fr       */
+/*   Updated: 2025/12/07 20:26:54 by malbayra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,5 @@
 
 Zombie* newZombie( std::string name ){
 	Zombie* zombie = new Zombie(name);
-	zombie->announce();
 	return zombie;
 }

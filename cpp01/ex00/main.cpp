@@ -6,7 +6,7 @@
 /*   By: malbayra <malbayra@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/26 11:34:20 by malbayra          #+#    #+#             */
-/*   Updated: 2025/11/13 19:07:29 by malbayra         ###   ########.fr       */
+/*   Updated: 2025/12/07 20:27:43 by malbayra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int main( void ) {
     std::cin >> name;
 
     Zombie *zombie2 = newZombie(name);
+    zombie2->announce();
     delete zombie2;
 
     return 0;
