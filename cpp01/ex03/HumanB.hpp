@@ -6,7 +6,7 @@
 /*   By: malbayra <malbayra@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 17:07:53 by malbayra          #+#    #+#             */
-/*   Updated: 2025/11/27 22:14:32 by malbayra         ###   ########.fr       */
+/*   Updated: 2025/12/07 18:13:37 by malbayra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include "Weapon.hpp"
 #include <string>
+#include <iostream>
 
 class HumanB
 {
