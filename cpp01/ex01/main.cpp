@@ -6,7 +6,7 @@
 /*   By: malbayra <malbayra@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 23:19:40 by malbayra          #+#    #+#             */
-/*   Updated: 2025/11/13 23:31:05 by malbayra         ###   ########.fr       */
+/*   Updated: 2025/12/08 17:35:10 by malbayra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ int main( void ) {
 	std::string name;
 	Zombie* zombies;
     std::cout << "Creating horde of zombie" << std::endl;
-    std::cout << "Number of Zombie: " << std::flush;
+    std::cout << "Number of Zombie: ";
     std::cin >> numzombie;    
-	std::cout << "Name of each Zombie: " << std::flush;
+	std::cout << "Name of each Zombie: ";
     std::cin >> name;
 
 	zombies = zombieHorde(numzombie, name);
