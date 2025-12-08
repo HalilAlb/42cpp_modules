@@ -6,11 +6,15 @@
 /*   By: malbayra <malbayra@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 17:07:04 by malbayra          #+#    #+#             */
-/*   Updated: 2025/11/27 19:41:00 by malbayra         ###   ########.fr       */
+/*   Updated: 2025/12/08 17:28:51 by malbayra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
+
+Weapon::Weapon() : _type("")
+{
+}
 
 Weapon::Weapon(const std::string &type) : _type(type)
 {
