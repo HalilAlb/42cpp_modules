@@ -6,13 +6,13 @@
 /*   By: malbayra <malbayra@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/26 11:35:27 by malbayra          #+#    #+#             */
-/*   Updated: 2025/11/13 19:05:15 by malbayra         ###   ########.fr       */
+/*   Updated: 2025/12/08 18:09:26 by malbayra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie( void ) : _name("foo"){	
+Zombie::Zombie( void ) : _name("Foo"){	
 }
 
 Zombie::Zombie( std::string name ) : _name(name){
