@@ -6,12 +6,14 @@
 /*   By: malbayra <malbayra@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 19:34:42 by malbayra          #+#    #+#             */
-/*   Updated: 2025/12/05 18:50:41 by malbayra         ###   ########.fr       */
+/*   Updated: 2025/12/08 18:58:10 by malbayra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef _Fixed_
 # define _Fixed_
+
+#include <iostream>
 
 class Fixed
 {
