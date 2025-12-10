@@ -1,4 +1,4 @@
-NAME    := Harlfilter
+NAME    := harlfilter
 CXX     := c++
 CXXFLAGS:= -Wall -Wextra -Werror -std=c++98 -MMD
 
