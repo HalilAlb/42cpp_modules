@@ -1,6 +1,3 @@
-CXX     := c++
-CXXFLAGS:= -Wall -Wextra -Werror -std=c++98 -MMD
-
 NAME    := ex03
 CXX     := c++
 CXXFLAGS:= -Wall -Wextra -Werror -std=c++98 -MMD
