@@ -6,7 +6,7 @@
 /*   By: malbayra <malbayra@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 17:06:50 by malbayra          #+#    #+#             */
-/*   Updated: 2025/12/08 15:36:30 by malbayra         ###   ########.fr       */
+/*   Updated: 2025/12/11 17:01:01 by malbayra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 int main()
 {
 {
-Weapon club = Weapon("crude spiked club"); // weapon için constroctur oluşturulacak
+Weapon club = Weapon("crude spiked club");
 HumanA bob("Bob", club);
 bob.attack();
 club.setType("some other type of club");
