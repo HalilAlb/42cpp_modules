@@ -6,12 +6,11 @@
 /*   By: malbayra <malbayra@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/17 19:19:14 by malbayra          #+#    #+#             */
-/*   Updated: 2025/12/17 19:22:56 by malbayra         ###   ########.fr       */
+/*   Updated: 2025/12/19 03:07:38 by malbayra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
-#include <iostream>
 
 int main(void)
 {
