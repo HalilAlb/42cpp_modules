@@ -6,7 +6,9 @@
 /*   By: malbayra <malbayra@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/23 22:34:45 by malbayra          #+#    #+#             */
-/*   Updated: 2025/12/23 22:34:46 by malbayra         ###   ########.fr       */
+/*   Updated: 2025/12/23 23:05:32 by malbayra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "ClapTrap.hpp"
 
