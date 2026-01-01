@@ -6,7 +6,7 @@
 /*   By: malbayra <malbayra@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 20:00:00 by malbayra          #+#    #+#             */
-/*   Updated: 2025/12/28 21:04:13 by malbayra         ###   ########.fr       */
+/*   Updated: 2026/01/01 18:27:11 by malbayra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -176,6 +176,43 @@ int main()
         }
     }
     std::cout << std::endl;
+
+    // std::cout << "=== Test 13: Polymorphism with dynamic_cast ===" << std::endl;
+    // {
+    //     std::cout << "\n--- Creating array of base class pointers ---" << std::endl;
+    //     ClapTrap* robots[3];
+    //     robots[0] = new ClapTrap("BasicBot");
+    //     robots[1] = new ScavTrap("GuardBot");
+    //     robots[2] = new FragTrap("DemoBot");
+
+    //     std::cout << "\n--- Using dynamic_cast for type-safe downcasting ---" << std::endl;
+    //     for (int i = 0; i < 3; i++)
+    //     {
+    //         std::cout << "\nRobot " << i << ": " << std::endl;
+    //         robots[i]->attack("Target");
+            
+    //         // Try casting to ScavTrap
+    //         ScavTrap* scav = dynamic_cast<ScavTrap*>(robots[i]);
+    //         if (scav)
+    //         {
+    //             std::cout << "-> It's a ScavTrap!" << std::endl;
+    //             scav->guardGate();
+    //         }
+            
+    //         // Try casting to FragTrap
+    //         FragTrap* frag = dynamic_cast<FragTrap*>(robots[i]);
+    //         if (frag)
+    //         {
+    //             std::cout << "-> It's a FragTrap!" << std::endl;
+    //             frag->highFivesGuys();
+    //         }
+    //     }
+
+    //     std::cout << "\n--- Cleaning up ---" << std::endl;
+    //     for (int i = 0; i < 3; i++)
+    //         delete robots[i];
+    // }
+    // std::cout << std::endl;
 
     return 0;
 }

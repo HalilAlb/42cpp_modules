@@ -6,7 +6,7 @@
 /*   By: malbayra <malbayra@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/23 22:34:50 by malbayra          #+#    #+#             */
-/*   Updated: 2026/01/01 18:26:47 by malbayra         ###   ########.fr       */
+/*   Updated: 2025/12/28 21:00:40 by malbayra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,8 +102,3 @@ void ClapTrap::beRepaired(unsigned int amount)
     std::cout << "ClapTrap " << _name << " repairs itself for " << amount 
               << " hit points! Current HP: " << _hitPoints << std::endl;
 }
-
-// std::string ClapTrap::getName() const
-// {
-//     return _name;
-// }

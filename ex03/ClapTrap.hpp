@@ -6,7 +6,7 @@
 /*   By: malbayra <malbayra@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/23 22:34:48 by malbayra          #+#    #+#             */
-/*   Updated: 2026/01/01 18:26:55 by malbayra         ###   ########.fr       */
+/*   Updated: 2025/12/28 21:00:40 by malbayra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,5 @@ public:
     void attack(const std::string &target);
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
-    
-    // std::string getName() const;
 };
 #endif
