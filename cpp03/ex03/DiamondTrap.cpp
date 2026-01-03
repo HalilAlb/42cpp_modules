@@ -6,7 +6,7 @@
 /*   By: malbayra <malbayra@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 21:30:00 by malbayra          #+#    #+#             */
-/*   Updated: 2025/12/28 21:10:09 by malbayra         ###   ########.fr       */
+/*   Updated: 2026/01/01 18:51:48 by malbayra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,4 +58,3 @@ void DiamondTrap::whoAmI()
     std::cout << "DiamondTrap name: " << _name << std::endl;
     std::cout << "ClapTrap name: " << ClapTrap::_name << std::endl;
 }
-
