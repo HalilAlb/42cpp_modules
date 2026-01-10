@@ -1,4 +1,4 @@
-NAME    := polymorphism
+NAME    := brain
 CXX     := c++
 CXXFLAGS:= -Wall -Wextra -Werror -std=c++98 -MMD
 
@@ -6,8 +6,7 @@ SRC     := main.cpp \
            Animal.cpp \
            Dog.cpp \
            Cat.cpp \
-           WrongAnimal.cpp \
-           WrongCat.cpp
+           Brain.cpp
 OBJDIR  := objs
 OBJ     := $(addprefix $(OBJDIR)/, $(SRC:.cpp=.o))
 DEPS    := $(OBJ:.o=.d)
