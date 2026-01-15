@@ -117,7 +117,7 @@ void testWrongAnimal()
 	std::cout << "WrongAnimal sound: ";
 	wrongMeta->makeSound();
 	std::cout << "WrongCat sound (but outputs WrongAnimal sound): ";
-	wrongCat->makeSound(); // Will output WrongAnimal sound because makeSound() is not virtual!
+	wrongCat->makeSound();
 	
 	std::cout << "\n--- Cleanup ---" << std::endl;
 	delete wrongCat;

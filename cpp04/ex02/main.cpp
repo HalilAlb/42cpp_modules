@@ -167,8 +167,5 @@ int main()
 	std::cout << "\n✓ Animal is now an abstract class - cannot be instantiated directly" << std::endl;
 	std::cout << "✓ Polymorphism still works perfectly with Dog and Cat" << std::endl;
 	std::cout << "✓ All virtual functions must be implemented in derived classes" << std::endl;
-	std::cout << "\nRun with leaks to check for memory leaks:" << std::endl;
-	std::cout << "leaks -atExit -- ./abstract" << std::endl;
-	
 	return 0;
 }
