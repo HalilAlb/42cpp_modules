@@ -5,6 +5,10 @@
 #include <iostream>
 #include <exception>
 
+
+
+class AForm;
+
 class Bureaucrat
 {
 private:
@@ -30,11 +34,15 @@ public:
 	void				incrementGrade();
 	void				decrementGrade();
 
+	
+	void				signForm(AForm& form);
+
+	
+	void				executeForm(const AForm& form) const;
 
 	class GradeTooHighException : public std::exception
 	{
 	public:
-		
 		virtual const char* what() const throw();
 	};
 

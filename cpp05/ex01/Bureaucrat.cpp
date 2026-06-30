@@ -1,9 +1,9 @@
 #include "Bureaucrat.hpp"
+#include "Form.hpp" 
 
 Bureaucrat::Bureaucrat() : _name("Default"), _grade(LOWEST_GRADE)
 {
 }
-
 
 Bureaucrat::Bureaucrat(const std::string& name, int grade) : _name(name), _grade(grade)
 {
@@ -18,7 +18,6 @@ Bureaucrat& Bureaucrat::operator=(const Bureaucrat& other)
 {
 	if (this != &other)
 	{
-		
 		_grade = other._grade;
 	}
 	return *this;
@@ -42,17 +41,16 @@ int Bureaucrat::getGrade() const
 
 void Bureaucrat::incrementGrade()
 {
-	
-	validateGrade(_grade - 1); 
+	validateGrade(_grade - 1);
 	_grade--;
 }
 
 void Bureaucrat::decrementGrade()
 {
-
-	validateGrade(_grade + 1); 
+	validateGrade(_grade + 1);
 	_grade++;
 }
+
 
 void Bureaucrat::validateGrade(int grade) const
 {
@@ -61,6 +59,22 @@ void Bureaucrat::validateGrade(int grade) const
 	if (grade > LOWEST_GRADE)
 		throw GradeTooLowException();
 }
+
+
+void Bureaucrat::signForm(Form& form)
+{
+	try
+	{
+		form.beSigned(*this);
+		std::cout << _name << " signed " << form.getName() << std::endl;
+	}
+	catch (std::exception& e)
+	{
+		std::cout << _name << " couldn't sign " << form.getName()
+				  << " because " << e.what() << std::endl;
+	}
+}
+
 
 const char* Bureaucrat::GradeTooHighException::what() const throw()
 {
