@@ -54,10 +54,10 @@ void ShrubberyCreationForm::executeAction() const
 		   " /~~         ~~\\\n"
 		   "{               }\n"
 		   " \\  _-     -_  /\n"
-		   "   ~  \\\\ 
+		   "   ~  \\\\ 		   "
 		   "_- -   | | _- _\n"
 		   "  _ -  | |   -_\n"
-		   "      
+		   "      			 "
 		   "\n"
 		   "        ___\n"
 		   "    .-9 9 `\\\n"
