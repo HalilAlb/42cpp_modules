@@ -14,7 +14,7 @@ int main()
 	Bureaucrat	boss("Boss", 1);
 
 
-	std::cout << "=== Test 1: PDF örneği — Bender için robotomy request ===" << std::endl;
+	std::cout << "=== Test 1: PDF example — Bender for robotomy request ===" << std::endl;
 	{
 		AForm* rrf = intern.makeForm("robotomy request", "Bender");
 		if (rrf)
@@ -50,7 +50,7 @@ int main()
 	}
 
 
-	std::cout << "\n=== Test 4: Bilinmeyen form ismi → NULL ===" << std::endl;
+	std::cout << "\n=== Test 4: unknown form name → NULL ===" << std::endl;
 	{
 		AForm* form = intern.makeForm("coffee request", "anyone");
 		if (form == NULL)
@@ -58,22 +58,22 @@ int main()
 		else
 		{
 			delete form;
-			std::cout << "[ERROR] beklenmedik: form NULL değil" << std::endl;
+			std::cout << "[ERROR] expected: form is not NULL" << std::endl;
 		}
 	}
 
 
-	std::cout << "\n=== Test 5: Boş string form ismi ===" << std::endl;
+	std::cout << "\n=== Test 5: Empty string form name ===" << std::endl;
 	{
 		AForm* form = intern.makeForm("", "x");
 		if (form == NULL)
-			std::cout << "(boş isim de bilinmeyen sayılır, NULL)" << std::endl;
+			std::cout << "(An empty name is also considered unknown., NULL)" << std::endl;
 		else
 			delete form;
 	}
 
 
-	std::cout << "\n=== Test 6: Intern OCF temel kontrolü ===" << std::endl;
+	std::cout << "\n=== Test 6:Internal OCF basic check ===" << std::endl;
 	{
 		Intern a;
 		Intern b(a);
