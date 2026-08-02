@@ -4,7 +4,7 @@
 
 int main()
 {
-	std::cout << "=== Test 1: Geçerli Form oluşturma ===" << std::endl;
+	std::cout << "=== Test 1: Creating a valid form ===" << std::endl;
 	try
 	{
 		Form taxReport("TaxReport", 50, 25);
@@ -16,7 +16,7 @@ int main()
 	}
 
 
-	std::cout << "\n=== Test 2: Geçersiz form grade (çok yüksek, 0 < 1) ===" << std::endl;
+	std::cout << "\n=== Test 2: Invalid form grade (too high, 0 < 1) ===" << std::endl;
 	try
 	{
 		Form invalid("Invalid", 0, 50);
@@ -27,7 +27,7 @@ int main()
 	}
 
 
-	std::cout << "\n=== Test 3: Geçersiz form grade (çok düşük, 151 > 150) ===" << std::endl;
+	std::cout << "\n=== Test 3:Invalid form grade (too low, 151 > 150) ===" << std::endl;
 	try
 	{
 		Form invalid("Invalid", 50, 151);
@@ -38,7 +38,7 @@ int main()
 	}
 
 
-	std::cout << "\n=== Test 4: Yeterli rütbeli bureaucrat formu imzalar ===" << std::endl;
+	std::cout << "\n=== Test 4:A bureaucrat of sufficient rank signs the form. ===" << std::endl;
 	try
 	{
 		Bureaucrat boss("Boss", 10);
@@ -53,7 +53,7 @@ int main()
 	}
 
 
-	std::cout << "\n=== Test 5: Yetersiz rütbeli bureaucrat imzalayamaz ===" << std::endl;
+	std::cout << "\n=== Test 5:An insufficiently ranked bureaucrat cannot sign. ===" << std::endl;
 	try
 	{
 		Bureaucrat intern("Intern", 100);  
@@ -67,7 +67,7 @@ int main()
 	}
 
 
-	std::cout << "\n=== Test 6: Sınır durumu — rütbe tam imzalama eşiğinde ===" << std::endl;
+	std::cout << "\n=== Test 6:Boundary case — rank on the verge of full signature ===" << std::endl;
 	try
 	{
 		Bureaucrat exact("Exact", 50);  
@@ -80,7 +80,7 @@ int main()
 	}
 
 
-	std::cout << "\n=== Test 7: beSigned doğrudan çağrı (signForm bypass) ===" << std::endl;
+	std::cout << "\n=== Test 7:beSigned direct call (signForm bypass) ===" << std::endl;
 	
 	try
 	{

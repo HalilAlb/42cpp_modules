@@ -14,7 +14,7 @@ int main()
 	std::srand(static_cast<unsigned int>(std::time(NULL)));
 
 
-	std::cout << "=== Test 1: ShrubberyCreationForm — başarılı execute ===" << std::endl;
+	std::cout << "=== Test 1: ShrubberyCreationForm — successful execution ===" << std::endl;
 	{
 		Bureaucrat boss("Boss", 1);          
 		ShrubberyCreationForm form("garden"); 
@@ -24,7 +24,7 @@ int main()
 	}
 
 
-	std::cout << "\n=== Test 2: İmzasız form execute denemesi ===" << std::endl;
+	std::cout << "\n=== Test 2: Attempt to execute an unsigned form ===" << std::endl;
 	{
 		Bureaucrat boss("Boss", 1);
 		ShrubberyCreationForm form("nogarden");
@@ -32,7 +32,7 @@ int main()
 	}
 
 
-	std::cout << "\n=== Test 3: Yetersiz rütbe ile execute denemesi ===" << std::endl;
+	std::cout << "\n=== Test 3: Attempt to execute with insufficient rank ===" << std::endl;
 	{
 		Bureaucrat boss("Boss", 1);
 		Bureaucrat weak("Weak", 150);
@@ -42,7 +42,7 @@ int main()
 	}
 
 
-	std::cout << "\n=== Test 4: RobotomyRequestForm — birkaç deneme (random %50) ===" << std::endl;
+	std::cout << "\n=== Test 4: RobotomyRequestForm — a few trials (random 50%) ===" << std::endl;
 	{
 		Bureaucrat boss("Boss", 1);
 		RobotomyRequestForm form("Bender");
@@ -52,7 +52,7 @@ int main()
 	}
 
 
-	std::cout << "\n=== Test 5: PresidentialPardonForm — başarılı execute ===" << std::endl;
+	std::cout << "\n=== Test 5: PresidentialPardonForm —  successful execute ===" << std::endl;
 	{
 		Bureaucrat president("President", 1);
 		PresidentialPardonForm form("Arthur Dent");
@@ -61,7 +61,7 @@ int main()
 	}
 
 
-	std::cout << "\n=== Test 6: PresidentialPardonForm sign için yetersiz rütbe ===" << std::endl;
+	std::cout << "\n=== Test 6:Insufficient rank to sign the Presidential Pardon Form ===" << std::endl;
 	{
 		Bureaucrat lowRank("LowRank", 100);
 		PresidentialPardonForm form("Marvin");
@@ -70,7 +70,7 @@ int main()
 	}
 
 
-	std::cout << "\n=== Test 7: Polymorphic AForm* kullanımı ===" << std::endl;
+	std::cout << "\n=== Test 7: Use of polymorphic AForm* ===" << std::endl;
 	{
 		Bureaucrat boss("Boss", 1);
 		AForm* forms[3];
@@ -89,9 +89,9 @@ int main()
 	}
 
 
-	std::cout << "\n=== Test 8: AForm direkt instantiate edilemez (compile-time check) ===" << std::endl;
+	std::cout << "\n=== Test 8:AForm cannot be instantiated directly (compile-time check) ===" << std::endl;
 	
-	std::cout << "AForm abstract — instantiate satırı yorumda, derleme zamanı engellenir."
+	std::cout << "AForm abstract — If the instantiation line is commented out, it is prevented at compile time."
 			  << std::endl;
 
 	return 0;
