@@ -70,7 +70,7 @@ int main()
 {
 	std::srand(static_cast<unsigned int>(std::time(NULL)));
 
-	std::cout << "=== 6 rastgele instance — pointer & reference ile identify ===" << std::endl;
+	std::cout << "=== 6 rastgele instance — pointer & referance with identify ===" << std::endl;
 	for (int i = 0; i < 6; ++i)
 	{
 		Base* b = generate();

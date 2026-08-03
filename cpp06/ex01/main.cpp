@@ -22,17 +22,17 @@ int main()
 			  << "  (hex: 0x" << std::hex << raw << std::dec << ")" << std::endl;
 
 
-	std::cout << "\n=== Test 2: deserialize → Data* (eşitlik kontrolü) ===" << std::endl;
+	std::cout << "\n=== Test 2: deserialize → Data* (equality check) ===" << std::endl;
 	Data* roundtrip = Serializer::deserialize(raw);
 	std::cout << "Deserialized pointer: " << roundtrip << std::endl;
 
 	if (roundtrip == originalPtr)
-		std::cout << "OK: round-trip pointer'lar EŞİT." << std::endl;
+		std::cout << "OK: round-trip pointers are EQUAL." << std::endl;
 	else
-		std::cout << "FAIL: pointer'lar farklı!" << std::endl;
+		std::cout << "FAIL: pointers are different!" << std::endl;
 
 
-	std::cout << "\n=== Test 3: round-trip sonrası veri erişimi ===" << std::endl;
+	std::cout << "\n=== Test 3: Data access after round-trip ===" << std::endl;
 	std::cout << "  id=" << roundtrip->id << "  name=" << roundtrip->name << std::endl;
 
 
