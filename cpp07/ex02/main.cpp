@@ -7,10 +7,10 @@
 
 int main()
 {
-	std::cout << "=== Test 1: Boş Array (default ctor) ===" << std::endl;
+	std::cout << "=== Test 1: empty Array (default ctor) ===" << std::endl;
 	{
 		Array<int> empty;
-		std::cout << "size: " << empty.size() << " (beklenen: 0)" << std::endl;
+		std::cout << "size: " << empty.size() << " (expected: 0)" << std::endl;
 		try
 		{
 			empty[0];  
@@ -22,17 +22,17 @@ int main()
 	}
 
 
-	std::cout << "\n=== Test 2: Array<int>(5) — default-init kontrolü ===" << std::endl;
+	std::cout << "\n=== Test 2: Array<int>(5) — default-init control of ===" << std::endl;
 	{
 		Array<int> arr(5);
 		std::cout << "size: " << arr.size() << std::endl;
 		
 		for (unsigned int i = 0; i < arr.size(); ++i)
-			std::cout << "arr[" << i << "] = " << arr[i] << " (beklenen: 0)" << std::endl;
+			std::cout << "arr[" << i << "] = " << arr[i] << " (expected: 0)" << std::endl;
 	}
 
 
-	std::cout << "\n=== Test 3: Yazma + okuma ===" << std::endl;
+	std::cout << "\n=== Test 3: write + read ===" << std::endl;
 	{
 		Array<int> arr(3);
 		arr[0] = 10;
@@ -43,7 +43,7 @@ int main()
 	}
 
 
-	std::cout << "\n=== Test 4: Out of bounds — exception fırlat ===" << std::endl;
+	std::cout << "\n=== Test 4: Out of bounds — exception throw ===" << std::endl;
 	{
 		Array<int> arr(3);
 		try
@@ -73,8 +73,8 @@ int main()
 		Array<int> copy(orig);
 		copy[0] = 99;  
 
-		std::cout << "orig[0] = " << orig[0] << " (beklenen: 1)" << std::endl;
-		std::cout << "copy[0] = " << copy[0] << " (beklenen: 99)" << std::endl;
+		std::cout << "orig[0] = " << orig[0] << " (expected: 1)" << std::endl;
+		std::cout << "copy[0] = " << copy[0] << " (expected: 99)" << std::endl;
 	}
 
 
@@ -88,12 +88,12 @@ int main()
 		b[0] = 999;
 
 		std::cout << "a.size() = " << a.size() << ", b.size() = " << b.size() << std::endl;
-		std::cout << "a[0] = " << a[0] << " (beklenen: 10)" << std::endl;
-		std::cout << "b[0] = " << b[0] << " (beklenen: 999)" << std::endl;
+		std::cout << "a[0] = " << a[0] << " (expected: 10)" << std::endl;
+		std::cout << "b[0] = " << b[0] << " (expected: 999)" << std::endl;
 	}
 
 
-	std::cout << "\n=== Test 7: string ile (T = std::string) ===" << std::endl;
+	std::cout << "\n=== Test 7: with string  (T = std::string) ===" << std::endl;
 	{
 		Array<std::string> s(3);
 		s[0] = "alpha";
@@ -116,7 +116,7 @@ int main()
 	}
 
 
-	std::cout << "\n=== Test 9: Rastgele stres testi ===" << std::endl;
+	std::cout << "\n=== Test 9: Random stress test ===" << std::endl;
 	{
 		std::srand(static_cast<unsigned int>(std::time(NULL)));
 		const unsigned int N = 100;

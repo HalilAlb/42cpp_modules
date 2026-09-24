@@ -24,7 +24,7 @@ int main(void)
 
 
 	
-	std::cout << "\n--- Eşitlik testi ---" << std::endl;
+	std::cout << "\n---Equality test ---" << std::endl;
 	int x = 5;
 	int y = 5;
 	const int& m = ::min(x, y);

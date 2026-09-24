@@ -45,7 +45,7 @@ int main()
 	}
 
 
-	std::cout << "\n=== Test 2: string array — sadece print ===" << std::endl;
+	std::cout << "\n=== Test 2: string array — just print ===" << std::endl;
 	{
 		std::string arr[] = { "alpha", "beta", "gamma" };
 		size_t len = sizeof(arr) / sizeof(arr[0]);
@@ -54,7 +54,7 @@ int main()
 	}
 
 
-	std::cout << "\n=== Test 3: const array — const callback ile ===" << std::endl;
+	std::cout << "\n=== Test 3: const array — const with callback  ===" << std::endl;
 	{
 		const int carr[] = { 10, 20, 30 };
 		
@@ -65,7 +65,7 @@ int main()
 	}
 
 
-	std::cout << "\n=== Test 4: function pointer (template değil) ===" << std::endl;
+	std::cout << "\n=== Test 4: function pointer (not template ) ===" << std::endl;
 	{
 		int arr[] = { 7, 8, 9 };
 		iter(arr, 3, printInt);
@@ -73,11 +73,11 @@ int main()
 	}
 
 
-	std::cout << "\n=== Test 5: length = 0 (sınır durumu) ===" << std::endl;
+	std::cout << "\n=== Test 5: length = 0 (boundary condition) ===" << std::endl;
 	{
 		int arr[1] = { 0 };
 		iter(arr, 0, printIt<int>);  
-		std::cout << "(yazdırılan eleman yok — beklenen)" << std::endl;
+		std::cout << "(no printed elements — expected)" << std::endl;
 	}
 
 	return 0;
