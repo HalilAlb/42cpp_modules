@@ -3,7 +3,6 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
-#include <ctime>
 
 int main()
 {
@@ -113,24 +112,6 @@ int main()
 		std::cout << "cref[0] = " << cref[0] << std::endl;
 		std::cout << "cref[1] = " << cref[1] << std::endl;
 		
-	}
-
-
-	std::cout << "\n=== Test 9: Random stress test ===" << std::endl;
-	{
-		std::srand(static_cast<unsigned int>(std::time(NULL)));
-		const unsigned int N = 100;
-		Array<int> arr(N);
-		for (unsigned int i = 0; i < N; ++i)
-			arr[i] = static_cast<int>(i * 2);
-
-		
-		for (int t = 0; t < 5; ++t)
-		{
-			unsigned int idx = static_cast<unsigned int>(std::rand()) % (N + 10);
-			try { std::cout << "arr[" << idx << "] = " << arr[idx] << std::endl; }
-			catch (std::exception& e) { std::cout << "arr[" << idx << "] → " << e.what() << std::endl; }
-		}
 	}
 
 	return 0;

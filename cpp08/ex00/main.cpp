@@ -7,7 +7,7 @@
 
 int main()
 {
-	std::cout << "=== Test 1: vector — bulundu ===" << std::endl;
+	std::cout << "=== Test 1: vector — found ===" << std::endl;
 	{
 		std::vector<int> v;
 		v.push_back(10);
@@ -22,7 +22,7 @@ int main()
 	}
 
 
-	std::cout << "\n=== Test 2: vector — bulunamadı (exception) ===" << std::endl;
+	std::cout << "\n=== Test 2: vector — not found (exception) ===" << std::endl;
 	{
 		std::vector<int> v;
 		v.push_back(1);
@@ -35,7 +35,7 @@ int main()
 	}
 
 
-	std::cout << "\n=== Test 3: list — iterator döner ===" << std::endl;
+	std::cout << "\n=== Test 3: list — returns an iterator ===" << std::endl;
 	{
 		std::list<int> l;
 		l.push_back(5);
@@ -50,7 +50,7 @@ int main()
 	}
 
 
-	std::cout << "\n=== Test 4: deque + boş container ===" << std::endl;
+	std::cout << "\n=== Test 4: deque + empty container ===" << std::endl;
 	{
 		std::deque<int> d;
 		try { easyfind(d, 0); }
@@ -74,7 +74,7 @@ int main()
 	}
 
 
-	std::cout << "\n=== Test 6: çoklu eşleşme — first occurrence dönmeli ===" << std::endl;
+	std::cout << "\n=== Test 6: multiple match — should return first occurrence  ===" << std::endl;
 	{
 		std::vector<int> v;
 		v.push_back(4);
@@ -83,7 +83,7 @@ int main()
 		v.push_back(8);
 		std::vector<int>::iterator it = easyfind(v, 2);
 		std::cout << "First '2' at index " << (it - v.begin())
-				  << " (beklenen: 1)" << std::endl;
+				  << " (expected: 1)" << std::endl;
 	}
 
 	return 0;

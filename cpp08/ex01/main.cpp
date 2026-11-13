@@ -8,7 +8,7 @@
 
 int main()
 {
-	std::cout << "=== Test 1: PDF örneği ===" << std::endl;
+	std::cout << "=== Test 1: PDF example ===" << std::endl;
 	{
 		Span sp = Span(5);
 		sp.addNumber(6);
@@ -16,12 +16,12 @@ int main()
 		sp.addNumber(17);
 		sp.addNumber(9);
 		sp.addNumber(11);
-		std::cout << sp.shortestSpan() << " (beklenen: 2)" << std::endl;
-		std::cout << sp.longestSpan() << " (beklenen: 14)" << std::endl;
+		std::cout << sp.shortestSpan() << " (expected: 2)" << std::endl;
+		std::cout << sp.longestSpan() << " (expected: 14)" << std::endl;
 	}
 
 
-	std::cout << "\n=== Test 2: Dolu container'a ekleme → exception ===" << std::endl;
+	std::cout << "\n=== Test 2: Adding to a full container → exception ===" << std::endl;
 	{
 		Span sp(2);
 		sp.addNumber(1);
@@ -31,7 +31,7 @@ int main()
 	}
 
 
-	std::cout << "\n=== Test 3: Yetersiz eleman (< 2) — span hesaplanamaz ===" << std::endl;
+	std::cout << "\n=== Test 3: Insufficient staff (< 2) — span cannot be calculated ===" << std::endl;
 	{
 		Span sp(10);
 		try { sp.shortestSpan(); }
@@ -43,15 +43,15 @@ int main()
 	}
 
 
-	std::cout << "\n=== Test 4: addRange — vector'den iterator aralığı ===" << std::endl;
+	std::cout << "\n=== Test 4: addRange — iterator range from a vector ===" << std::endl;
 	{
 		Span sp(5);
 		std::vector<int> v;
 		v.push_back(10); v.push_back(20); v.push_back(15); v.push_back(8);
 		sp.addRange(v.begin(), v.end());
 		std::cout << "size: " << sp.size() << std::endl;
-		std::cout << "shortest: " << sp.shortestSpan() << " (beklenen: 2 → 8,10 farkı)" << std::endl;
-		std::cout << "longest:  " << sp.longestSpan()  << " (beklenen: 12)" << std::endl;
+		std::cout << "shortest: " << sp.shortestSpan() << " (expected: 2 → 8,10 difference)" << std::endl;
+		std::cout << "longest:  " << sp.longestSpan()  << " (expected: 12)" << std::endl;
 	}
 
 
@@ -62,7 +62,7 @@ int main()
 		v.push_back(1); v.push_back(2); v.push_back(3); v.push_back(4);  
 		try { sp.addRange(v.begin(), v.end()); }
 		catch (std::exception& e) { std::cerr << "Caught: " << e.what() << std::endl; }
-		std::cout << "size after fail: " << sp.size() << " (beklenen: 0 — hiçbiri eklenmedi)" << std::endl;
+		std::cout << "size after fail: " << sp.size() << " (expected: 0 — none were added)" << std::endl;
 	}
 
 
@@ -72,12 +72,12 @@ int main()
 		std::list<int> l;
 		l.push_back(100); l.push_back(200); l.push_back(150);
 		sp.addRange(l.begin(), l.end());
-		std::cout << "shortest: " << sp.shortestSpan() << " (beklenen: 50)" << std::endl;
-		std::cout << "longest:  " << sp.longestSpan()  << " (beklenen: 100)" << std::endl;
+		std::cout << "shortest: " << sp.shortestSpan() << " (expected: 50)" << std::endl;
+		std::cout << "longest:  " << sp.longestSpan()  << " (expected: 100)" << std::endl;
 	}
 
 
-	std::cout << "\n=== Test 7: 10000 random number stres testi (PDF: at least 10k) ===" << std::endl;
+	std::cout << "\n=== Test 7: 10000 random number stress test (PDF: at least 10k) ===" << std::endl;
 	{
 		std::srand(static_cast<unsigned int>(std::time(NULL)));
 		const unsigned int N = 10000;
@@ -93,15 +93,15 @@ int main()
 	}
 
 
-	std::cout << "\n=== Test 8: Negatif sayılar + sıfır mesafe ===" << std::endl;
+	std::cout << "\n=== Test 8: Negative numbers + zero distance ===" << std::endl;
 	{
 		Span sp(4);
 		sp.addNumber(-5);
 		sp.addNumber(0);
 		sp.addNumber(5);
 		sp.addNumber(5);   
-		std::cout << "shortest: " << sp.shortestSpan() << " (beklenen: 0 — iki 5)" << std::endl;
-		std::cout << "longest:  " << sp.longestSpan()  << " (beklenen: 10)" << std::endl;
+		std::cout << "shortest: " << sp.shortestSpan() << " (expected: 0 — two 5)" << std::endl;
+		std::cout << "longest:  " << sp.longestSpan()  << " (expected: 10)" << std::endl;
 	}
 
 

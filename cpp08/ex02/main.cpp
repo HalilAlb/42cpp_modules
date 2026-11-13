@@ -6,18 +6,18 @@
 
 int main()
 {
-	std::cout << "=== Test 1: PDF örnek main'i — MutantStack<int> ===" << std::endl;
+	std::cout << "=== Test 1: PDF example main — MutantStack<int> ===" << std::endl;
 	{
 		MutantStack<int> mstack;
 
 		mstack.push(5);
 		mstack.push(17);
 
-		std::cout << "top: " << mstack.top() << " (beklenen: 17)" << std::endl;
+		std::cout << "top: " << mstack.top() << " (expected: 17)" << std::endl;
 
 		mstack.pop();
 
-		std::cout << "size after pop: " << mstack.size() << " (beklenen: 1)" << std::endl;
+		std::cout << "size after pop: " << mstack.size() << " (expected: 1)" << std::endl;
 
 		mstack.push(3);
 		mstack.push(5);
@@ -40,11 +40,11 @@ int main()
 
 		
 		std::stack<int> s(mstack);
-		std::cout << "std::stack copy size: " << s.size() << " (beklenen: 5)" << std::endl;
+		std::cout << "std::stack copy size: " << s.size() << " (expected: 5)" << std::endl;
 	}
 
 
-	std::cout << "\n=== Test 2: PDF kontrolü — std::list ile aynı sırayı vermeli ===" << std::endl;
+	std::cout << "\n=== Test 2:PDF check — must yield the same order as std::list ===" << std::endl;
 	{
 		
 		std::list<int> lst;
@@ -84,7 +84,7 @@ int main()
 	}
 
 
-	std::cout << "\n=== Test 4: reverse_iterator (üstten dibe) ===" << std::endl;
+	std::cout << "\n=== Test 4: reverse_iterator (from top to bottom) ===" << std::endl;
 	{
 		MutantStack<int> m;
 		m.push(1); m.push(2); m.push(3); m.push(4);
@@ -96,7 +96,7 @@ int main()
 	}
 
 
-	std::cout << "\n=== Test 5: std::string ile farklı T ===" << std::endl;
+	std::cout << "\n=== Test 5: Different from std::string T ===" << std::endl;
 	{
 		MutantStack<std::string> sm;
 		sm.push("alpha");
@@ -121,7 +121,7 @@ int main()
 
 		b.pop();
 		std::cout << "After b.pop(): a.size=" << a.size()
-				  << " (deep copy → a etkilenmemeli, =2)" << std::endl;
+				  << " (deep copy → a should not be affected, =2)" << std::endl;
 	}
 
 	return 0;
